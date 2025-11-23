@@ -1,0 +1,153 @@
+<html>
+    <head>
+         <link rel="stylesheet" type= "text/css" href="mystyle.css">
+<script src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="Java.js" defer></script>
+<meta charset="UTF-8">
+<title> Travel Deals: Register </title>
+    </head>
+    <body>
+     <div class="header">
+      <p class="clock" id="date-time"></p>
+      <h1 class="tittle">Travel Deals
+<span id="userNameDisplay" style="margin-left:15px; font-size:16px;"></span>
+</h1>
+ </div>
+
+ <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="stays.html">Stays</a>
+    <a href="flights.html">Flights</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="cart.html">Cart</a>
+    <a href="myaccount.php">MyAccount</a>
+  </div>
+<!-- Main content area -->
+    <div class="main">
+      <!-- Same appearance controls as home page -->
+      <div class="side">
+        <h3>Appearance</h3>
+        <label>Background color:
+          <input type="color" id="bgColorControl">
+        </label>
+        <br><br>
+        <label>Font size:
+          <input type="range" id="fontSizeControl" min="12" max="28" value="16">
+        </label>
+      </div>
+
+      <!-- Registration form section -->
+      <div class="section">
+        <h2>Register</h2>
+        <p>Please fill in the form below to create your Travel Deals account.</p>
+
+        <form id="registerForm" method="post" action="register.php">
+          <!-- Phone number (required, ddd-ddd-dddd) -->
+          <label for="phone">Phone Number *</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="123-456-7890"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title="Phone must be in the format ddd-ddd-dddd"
+          >
+
+          <!-- Password + confirm password (required, at least 8 chars) -->
+          <label for="password">Password *</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="8"
+            title="Password must be at least 8 characters"
+          >
+
+          <label for="confirmPassword">Confirm Password *</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            minlength="8"
+            title="Please re-enter the same password"
+          >
+
+          <!-- First & Last name (required) -->
+          <label for="firstName">First Name *</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+          >
+
+          <label for="lastName">Last Name *</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+          >
+
+          <!-- Date of birth (required, MM/DD/YYYY) -->
+          <label for="dob">Date of Birth (MM/DD/YYYY) *</label>
+          <input
+            type="text"
+            id="dob"
+            name="dob"
+            placeholder="MM/DD/YYYY"
+            required
+            pattern="\d{2}/\d{2}/\d{4}"
+            title="Use format MM/DD/YYYY"
+          >
+
+          <!-- Email (required, must contain @ and .com) -->
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern=".+@.+\.com"
+            placeholder="example@domain.com"
+            title="Email must contain @ and end with .com"
+          >
+
+          <!-- Gender (radio, NOT required) -->
+          <label>Gender (optional)</label>
+          <label>
+            <input type="radio" name="gender" value="Female"> Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Male"> Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Other"> Other
+          </label>
+
+          <!-- Message area for JS validation / PHP response -->
+          <div id="regMessage" class="error"></div>
+
+          <div class="actions">
+            <button type="submit" class="btn">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer (same as index) -->
+    <div class="footer">
+      <p>
+        Name: Sally Badr - NetID: sxb230121<br>
+        Name: Sayali Balasaheb Kadam - NetID: dal680698<br>
+        Name: Gopika Murali - NetID: gxm240020<br>
+        Name: Sreeranj Sreenivasan - NetID: dal629689
+      </p>
+    </div>
+</body>
+</html>

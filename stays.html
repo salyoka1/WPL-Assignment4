@@ -1,0 +1,102 @@
+<html>
+    <head>
+         <link rel="stylesheet" type= "text/css" href="mystyle.css">
+<script src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="Java.js" defer></script>
+<title> Travel Deals: Hotel Deals </title>
+    </head>
+    <body>
+     <div class="header">
+      <p class="clock" id="date-time"></p>
+      <h1 class="tittle">Travel Deals
+<span id="userNameDisplay" style="margin-left:15px; font-size:16px;"></span>
+</h1>
+ </div>
+
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="stays.html">Stays</a>
+    <a href="flights.html">Flights</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="cart.html">Cart</a>
+    <a href="myaccount.php">MyAccount</a>
+  </div>
+  <div class="main">
+    <div class="side">
+       <h3>Appearance</h3>
+    
+    <label>Background color:
+      <input type="color" id="bgColorControl">
+    </label>
+    <br><br>
+    
+    <label>Font size:
+      <input type="range" id="fontSizeControl" min="12" max="28" value="16">
+    </label>
+    </div>
+   <div class="section" id="stays-section">
+  <h2>Find a Stay</h2>
+
+  <div class="stays-card">   <!-- new wrapper -->
+    <div class="row">
+      <div>
+        <label for="stayCity">City (TX/CA)</label>
+        <input id="stayCity" type="text" placeholder="e.g., Dallas">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="checkIn">Check-in</label>
+        <input id="checkIn" type="date">
+      </div>
+      <div>
+        <label for="checkOut">Check-out</label>
+        <input id="checkOut" type="date">
+      </div>
+    </div>
+
+    <div class="row">
+      <div><label for="stayAdults">Adults</label><input id="stayAdults" type="number" min="0" value="0"></div>
+      <div><label for="stayChildren">Children</label><input id="stayChildren" type="number" min="0" value="0"></div>
+      <div><label for="stayInfants">Infants</label><input id="stayInfants" type="number" min="0" value="0"></div>
+    </div>
+
+    <div class="actions">
+      <button id="staySearchBtn" class="btn" type="button">Search</button>
+    </div>
+  </div>
+
+  <!-- Error messages -->
+  <div id="stayError" class="error"></div>
+
+  <!-- Summary section (like #result in flights.html) -->
+  <div id="staySummary" class="summary" style="display:none;"></div>
+
+  </div>
+  <!-- Results section -->
+  <div id="stayResults" class="summary" style="display:none;">
+    <div id="stayList"></div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <p>Name: Sally Badr - NetID: sxb230121</br>
+Name: Sayali Balasaheb Kadam - NetID: dal680698</br>
+Name: Gopika Murali - NetID: gxm240020</br>
+Name: Sreeranj Sreenivasan - NetID: dal629689</p>
+
+  </div>
+        
+        
+        
+    </body>
+</html>
+
+
+
+
+
+

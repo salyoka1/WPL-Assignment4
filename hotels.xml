@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotels>
+  <!-- Texas Hotels -->
+  <hotel>
+    <hotelId>TX001</hotelId>
+    <hotelName>Grand Dallas Hotel</hotelName>
+    <city>Dallas</city>
+    <availableRooms>10</availableRooms>
+    <date>2024-09-10</date>
+    <pricePerNight>140</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX002</hotelId>
+    <hotelName>Houston Comfort Inn</hotelName>
+    <city>Houston</city>
+    <availableRooms>10</availableRooms>
+    <date>2024-09-20</date>
+    <pricePerNight>130</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX003</hotelId>
+    <hotelName>Austin Downtown Suites</hotelName>
+    <city>Austin</city>
+    <availableRooms>10</availableRooms>
+    <date>2024-10-01</date>
+    <pricePerNight>155</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX004</hotelId>
+    <hotelName>San Antonio Stay</hotelName>
+    <city>San Antonio</city>
+    <availableRooms>8</availableRooms>
+    <date>2024-10-12</date>
+    <pricePerNight>120</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX005</hotelId>
+    <hotelName>Fort Worth Luxury</hotelName>
+    <city>Fort Worth</city>
+    <availableRooms>14</availableRooms>
+    <date>2024-10-25</date>
+    <pricePerNight>170</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX006</hotelId>
+    <hotelName>El Paso Desert Inn</hotelName>
+    <city>El Paso</city>
+    <availableRooms>9</availableRooms>
+    <date>2024-11-01</date>
+    <pricePerNight>110</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX007</hotelId>
+    <hotelName>Plano Executive Hotel</hotelName>
+    <city>Plano</city>
+    <availableRooms>7</availableRooms>
+    <date>2024-11-10</date>
+    <pricePerNight>160</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX008</hotelId>
+    <hotelName>Galveston Beach Resort</hotelName>
+    <city>Galveston</city>
+    <availableRooms>5</availableRooms>
+    <date>2024-11-18</date>
+    <pricePerNight>185</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX009</hotelId>
+    <hotelName>Irving Comfort Stay</hotelName>
+    <city>Irving</city>
+    <availableRooms>11</availableRooms>
+    <date>2024-11-25</date>
+    <pricePerNight>135</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>TX010</hotelId>
+    <hotelName>Lubbock Grand Suites</hotelName>
+    <city>Lubbock</city>
+    <availableRooms>6</availableRooms>
+    <date>2024-12-01</date>
+    <pricePerNight>125</pricePerNight>
+  </hotel>
+
+  <!-- California Hotels -->
+  <hotel>
+    <hotelId>CA011</hotelId>
+    <hotelName>Los Angeles Central Hotel</hotelName>
+    <city>Los Angeles</city>
+    <availableRooms>16</availableRooms>
+    <date>2024-09-05</date>
+    <pricePerNight>210</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA012</hotelId>
+    <hotelName>San Francisco Bay View</hotelName>
+    <city>San Francisco</city>
+    <availableRooms>10</availableRooms>
+    <date>2024-09-15</date>
+    <pricePerNight>230</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA013</hotelId>
+    <hotelName>San Diego Oceanfront</hotelName>
+    <city>San Diego</city>
+    <availableRooms>13</availableRooms>
+    <date>2024-09-22</date>
+    <pricePerNight>195</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA014</hotelId>
+    <hotelName>Sacramento River Inn</hotelName>
+    <city>Sacramento</city>
+    <availableRooms>8</availableRooms>
+    <date>2024-10-03</date>
+    <pricePerNight>170</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA015</hotelId>
+    <hotelName>Fresno Valley Lodge</hotelName>
+    <city>Fresno</city>
+    <availableRooms>10</availableRooms>
+    <date>2024-10-15</date>
+    <pricePerNight>160</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA016</hotelId>
+    <hotelName>Santa Barbara Retreat</hotelName>
+    <city>Santa Barbara</city>
+    <availableRooms>6</availableRooms>
+    <date>2024-10-25</date>
+    <pricePerNight>220</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA017</hotelId>
+    <hotelName>Long Beach Suites</hotelName>
+    <city>Long Beach</city>
+    <availableRooms>9</availableRooms>
+    <date>2024-11-03</date>
+    <pricePerNight>185</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA018</hotelId>
+    <hotelName>Oakland Comfort Stay</hotelName>
+    <city>Oakland</city>
+    <availableRooms>12</availableRooms>
+    <date>2024-11-15</date>
+    <pricePerNight>175</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA019</hotelId>
+    <hotelName>San Jose Business Hotel</hotelName>
+    <city>San Jose</city>
+    <availableRooms>10</availableRooms>
+    <date>2024-11-25</date>
+    <pricePerNight>190</pricePerNight>
+  </hotel>
+
+  <hotel>
+    <hotelId>CA020</hotelId>
+    <hotelName>Monterey Bay Resort</hotelName>
+    <city>Monterey</city>
+    <availableRooms>5</availableRooms>
+    <date>2024-12-01</date>
+    <pricePerNight>240</pricePerNight>
+  </hotel>
+</hotels>

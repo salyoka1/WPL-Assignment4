@@ -1,0 +1,137 @@
+<html>
+    <head>
+<meta charset="UTF-8">
+         <link rel="stylesheet" type= "text/css" href="mystyle.css">
+<script src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="Java.js" defer></script>
+<title> Travel Deals: Flights Deals </title>
+         
+
+    </head>
+    <body>
+      <div class="header">
+      <p class="clock" id="date-time"></p>
+      <h1 class="tittle">Travel Deals
+<span id="userNameDisplay" style="margin-left:15px; font-size:16px;"></span>
+</h1>
+ </div>
+
+ <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="stays.html">Stays</a>
+    <a href="flights.html">Flights</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="cart.html">Cart</a>
+    <a href="myaccount.php">MyAccount</a>
+  </div>
+  <div class="main">
+    <div class="side">
+       <h3>Appearance</h3>
+    
+    <label>Background color:
+      <input type="color" id="bgColorControl">
+    </label>
+    <br><br>
+    
+    <label>Font size:
+      <input type="range" id="fontSizeControl" min="12" max="28" value="16">
+    </label>
+    </div>
+    <div class="section" id= "flight-section">
+      <h2>Book a Flight</h2>
+
+    <!-- Trip type -->
+    <div class="trip">
+      <label><input type="radio" name="trip" value="oneway" checked> One-way</label>
+      <label><input type="radio" name="trip" value="round"> Round trip</label>
+    </div>
+
+    <!-- Cities -->
+    <div class="row">
+      <div>
+        <label for="origin">Origin (TX/CA city)</label>
+        <input id="origin" type="text" placeholder="e.g., Dallas">
+      </div>
+      <div>
+        <label for="destination">Destination (TX/CA city)</label>
+        <input id="destination" type="text" placeholder="e.g., Los Angeles">
+      </div>
+    </div>
+
+    <!-- Dates -->
+    <div class="row">
+      <div>
+        <label for="departDate">Departure date </label>
+        <input id="departDate" type="date" placeholder="YYYY-MM-DD">
+      </div>
+      <div id="returnWrap" style="display:none;">
+        <label for="returnDate">Return date (Round trip)</label>
+        <input id="returnDate" type="date" placeholder="YYYY-MM-DD">
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="paxBtn" class="btn icon-btn" type="button">
+  <i class="fa-solid fa-user"></i> Passengers
+</button>
+      <button id="searchBtn" class="btn" type="button">Search</button>
+    </div>
+
+    <!-- Passenger panel -->
+    <div id="paxPanel" class="panel">
+      <div class="row">
+        <div>
+          <label for="adultCount">Adults (0–4)</label>
+          <input id="adultCount" type="text" value="1">
+        </div>
+        <div>
+          <label for="childCount">Children (0–4)</label>
+          <input id="childCount" type="text" value="0">
+        </div>
+        <div>
+          <label for="infantCount">Infants (0–4)</label>
+          <input id="infantCount" type="text" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div id="errorBox" class="error"></div>
+    <div id="result" class="summary" style="display:none;"></div>
+    </div>
+  <!-- NEW: search results go here -->
+<div id="flightResults" class="summary" style="display:none;">
+  <h3>Available flights</h3>
+  <div id="outboundWrap">
+    <h4>Departing flights</h4>
+    <div id="outboundList"></div>
+  </div>
+
+  <div id="inboundWrap" style="display:none; margin-top:16px;">
+    <h4>Returning flights</h4>
+    <div id="inboundList"></div>
+  </div>
+
+  <!-- For round trips, show an “Add both to cart” after two selections -->
+  <div id="addBothContainer" style="display:none; margin-top:12px;">
+    <button id="addRoundToCart" class="btn">Add departing + returning to cart</button>
+  </div>
+</div>
+</div>
+
+  <div class="footer">
+    <p>Name: Sally Badr - NetID: sxb230121</br>
+Name: Sayali Balasaheb Kadam - NetID: dal680698</br>
+Name: Gopika Murali - NetID: gxm240020</br>
+Name: Sreeranj Sreenivasan - NetID: dal629689</p>
+
+  </div>
+        
+        
+        
+    </body>
+</html>
+

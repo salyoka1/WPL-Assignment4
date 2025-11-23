@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Travel Deals: Cart</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <script src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="Java.js" defer></script>
+</head>
+<body>
+   <div class="header">
+      <p class="clock" id="date-time"></p>
+      <h1 class="tittle">Travel Deals
+<span id="userNameDisplay" style="margin-left:15px; font-size:16px;"></span>
+</h1>
+ </div>
+
+ <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="stays.html">Stays</a>
+    <a href="flights.html">Flights</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">register</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="cart.html">Cart</a>
+    <a href="myaccount.php">MyAccount</a> 
+  </div>
+
+  <div class="main">
+    <div class="side">
+      <h3>Appearance</h3>
+      <label>Background color: <input type="color" id="bgColorControl"></label><br><br>
+      <label>Font size: <input type="range" id="fontSizeControl" min="12" max="28" value="16"></label>
+    </div>
+
+    <div class="section">
+      <h2>Your Cart</h2>
+     <h3 style="background-color:#0b6cff; padding:8px 12px;display: inline-block;"> Flights Cart<h3>
+      <div id="cartFlights"></div>
+    
+      <h3>Flights Total: <span id="cartTotal">$0.00</span></h3>
+
+      <div id="passengerFormWrap" style="display:none; margin-top:16px;">
+        <h3>Passenger Details</h3>
+        <form id="passengerForm"></form>
+        <button id="bookBtn" class="btn" style="margin-top:12px;">Book</button>
+        <div id="bookMsg" class="summary" style="display:none; margin-top:12px;"></div>
+      </div>
+       <!-- Hotels Cart -->
+       <h3 style="background-color:#0b6cff; padding:8px 12px;display: inline-block;"> Hotel Cart<h3>
+      <div id="cartHotels" style="margin-top:30px;"></div>
+      
+      <h3>Hotels Total: <span id="cartTotalHotels">$0.00</span></h3>
+      <div id="hotelBookWrap" style="margin-top:16px;">
+        <button id="bookHotelsBtn" class="btn" style="display:none;">Book Hotels</button>
+        <div id="bookHotelsMsg" class="summary" style="display:none; margin-top:12px;"></div>
+      </div>
+
+      
+    </div>
+  </div>
+
+    <div class="footer">
+    <p>Name: Sally Badr - NetID: sxb230121</br>
+Name: Sayali Balasaheb Kadam - NetID: dal680698</br>
+Name: Gopika Murali - NetID: gxm240020</br>
+Name: Sreeranj Sreenivasan - NetID: dal629689</p>
+
+  </div>
+
+</body>
+</html>
