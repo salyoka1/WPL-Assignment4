@@ -593,7 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ? [workingItem.outbound, workingItem.inbound]
           : [workingItem.outbound];
 
-      $.ajax({
+          $.ajax({
         url: 'book_flight.php',
         method: 'POST',
         dataType: 'json',
@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
           passengers: JSON.stringify(pax),
           counts:     JSON.stringify(counts)
         },
-       success: function (resp) {
+        success: function (resp) {
           console.log('book_flight.php response:', resp);
           console.log('Tickets array:', resp.tickets);
 
@@ -622,7 +622,9 @@ document.addEventListener('DOMContentLoaded', () => {
           setCart(cart);
           renderCart();
 
-updateLocalSeatsAfterBooking(resp, totalPax);
+          // update local flights DB seats
+          updateLocalSeatsAfterBooking(resp, totalPax);
+
           // ====== SHOW DETAIL ON PAGE (bookMsg) ======
           if (bookMsg) {
             let html = `
@@ -671,62 +673,17 @@ updateLocalSeatsAfterBooking(resp, totalPax);
             bookMsg.style.display = 'block';
             bookMsg.scrollIntoView({ behavior: 'smooth' });
           }
-
-          // ====== BUILD DETAILED ALERT TEXT ======
-          const lines = [];
-          lines.push('Booking completed and stored in database.');
-          lines.push(''); // blank line
-          lines.push('Booked flights:');
-
-          if (Array.isArray(resp.bookings) && resp.bookings.length) {
-            resp.bookings.forEach((b, idx) => {
-              lines.push('');
-              lines.push(`Flight ${idx + 1}:`);
-              lines.push(`  flight-booking-id: ${b.flight_booking_id}`);
-              lines.push(`  flight-id: ${b.flight_id}`);
-              lines.push(`  origin: ${b.origin}`);
-              lines.push(`  destination: ${b.destination}`);
-              lines.push(`  departure date: ${b.depart_date}`);
-              lines.push(`  arrival date: ${b.arrival_date}`);
-              lines.push(`  departure time: ${b.depart_time}`);
-              lines.push(`  arrival time: ${b.arrival_time}`);
-              lines.push(`  total price for all passengers: $${Number(b.total_price).toFixed(2)}`);
-            });
-          } else {
-            lines.push('  (no booking records returned)');
-          }
-
-          lines.push('');
-          lines.push('Ticket information:');
-
-          if (Array.isArray(resp.tickets) && resp.tickets.length) {
-            resp.tickets.forEach((t, idx) => {
-              lines.push('');
-              lines.push(`Ticket ${idx + 1}:`);
-              lines.push(`  ticket-id: ${t.ticket_id}`);
-              lines.push(`  flight-booking-id: ${t.flight_booking_id}`);
-              lines.push(`  SSN: ${t.ssn}`);
-              lines.push(`  first name: ${t.first_name}`);
-              lines.push(`  last name: ${t.last_name}`);
-              lines.push(`  date of birth: ${t.dob}`);
-              lines.push(`  price: $${Number(t.price).toFixed(2)}`);
-            });
-          } else {
-            lines.push('  (no ticket records returned)');
-          }
-
-          alert(lines.join('\n'));
         },
         error: function (xhr, textStatus, errorThrown) {
           console.error('book_flight.php error:', textStatus, errorThrown, xhr.responseText);
           alert('Booking failed on server side.');
         }
       });
-    });
-
-  })();
+   });   // closes bookBtn.addEventListener
+  })();   // closes async IIFE
 });
-/* ==================== STAYS PAGE LOGIC (no RegExp) ==================== */
+
+         /* ==================== STAYS PAGE LOGIC (no RegExp) ==================== */
 const TX_CITIES = [
   "austin","dallas","houston","san antonio","el paso","fort worth","arlington","plano","irving","denton",
   "corpus christi","lubbock","garland","mckinney","frisco","amarillo","grand prairie","brownsville"
