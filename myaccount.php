@@ -37,8 +37,11 @@ session_start();
       ?>
           <h3>Admin Tools</h3>
           <p>Click the button below to load <code>flights.json</code> into the database.</p>
-          <form action="load_flights.php" method="post">
+          <form action="load_flights.php" method="post" style="margin-bottom:20px;">
             <button type="submit">Load flights.json into database</button>
+          </form>
+          <form method="post" action="load_hotels.php">
+            <button type="submit">Load hotels.xml into database</button>
           </form>
       <?php
         } else {
