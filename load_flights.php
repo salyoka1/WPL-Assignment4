@@ -2,22 +2,19 @@
 session_start();
 
 /*
- * For now we will NOT block this by role.
- * We’ll just require that the user is logged in OR
- * even completely skip the check so you can load data.
- *
- * If you still get "Not authorized", just comment out
- * this whole IF block.
+ * ===================== ADMIN CHECK ======================
+ * Only allow access if:
+ * 1) user is logged in, AND
+ * 2) user is an admin (isAdmin == 1)
  */
-
-// --- OPTION A: require login (comment this out if it still fails) ---
-/*
-if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
-    echo "Not authorized.";
+if (
+    !isset($_SESSION['firstName']) ||
+    !isset($_SESSION['isAdmin']) ||
+    $_SESSION['isAdmin'] != 1
+) {
+    echo "Access denied. Admins only.";
     exit;
 }
-*/
-// --- END AUTH CHECK ---
 
 // ========== 1) CONNECT TO DATABASE ==========
 $host   = "localhost";

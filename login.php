@@ -41,7 +41,7 @@ if ($mysqli->connect_error) {
 }
 
 // Look up user
-$sql = "SELECT phone, password, firstName, lastName, dateOfBirth, gender, email
+$sql = "SELECT phone, password, firstName, lastName, dateOfBirth, gender, email, isAdmin
         FROM users
         WHERE phone = ?";
 $stmt = $mysqli->prepare($sql);
@@ -65,8 +65,8 @@ if ($row = $result->fetch_assoc()) {
         $_SESSION['dob']       = $row['dateOfBirth'];
         $_SESSION['gender']    = $row['gender'];
         $_SESSION['email']     = $row['email'];
-        $_SESSION['is_admin']  = ($row['phone'] === '222-222-2222');
-
+        $_SESSION['isAdmin']  = $row['isAdmin'];
+        $_SESSION['loggedIn']  = true;
         $stmt->close();
         $mysqli->close();
 

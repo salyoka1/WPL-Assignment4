@@ -5,9 +5,13 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // 1) CHECK LOGIN
-// if (!isset($_SESSION['user_id'])) {
-//     die("You must be logged in to load hotels data.");
-// }
+if (!isset($_SESSION['phone'])) {
+    die("Access denied. Please log in.");
+}
+// ADMIN CHECK
+if (!isset($_SESSION['isAdmin']) || $_SESSION['isAdmin'] != 1) {
+    die("Access denied. Admins only.");
+}
 
 // 2) CONNECT TO DATABASE travel_deals
 $host = "localhost";

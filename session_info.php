@@ -8,7 +8,7 @@ if (isset($_SESSION['phone'])) {
         'loggedIn'  => true,
         'firstName' => $_SESSION['firstName'],
         'lastName'  => $_SESSION['lastName'],
-        'isAdmin'   => !empty($_SESSION['is_admin'])
+        'isAdmin'   => $_SESSION['isAdmin']
     ]);
 } else {
     echo json_encode(['loggedIn' => false]);
