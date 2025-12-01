@@ -12,7 +12,7 @@ SELECT fb.flight_booking_id, fb.flight_id, f.origin, f.destination, f.depart_dat
 FROM flight_booking fb
 JOIN flights f ON fb.flight_id = f.flight_id
 ORDER BY fb.total_price DESC
-LIMIT 10
+LIMIT 1
 ";
 $result = $conn->query($sql);
 ?>

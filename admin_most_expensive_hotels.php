@@ -12,7 +12,7 @@ SELECT hb.hotel_booking_id, hb.hotel_id, h.hotel_name, h.city, hb.check_in_date,
 FROM hotel_booking hb
 JOIN hotels h ON hb.hotel_id = h.hotel_id
 ORDER BY hb.total_price DESC
-LIMIT 10
+LIMIT 1
 ";
 $result = $conn->query($sql);
 ?>

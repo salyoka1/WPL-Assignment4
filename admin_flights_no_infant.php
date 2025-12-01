@@ -13,9 +13,13 @@ SELECT fb.flight_booking_id, fb.flight_id, f.origin, f.destination,
        fb.total_price
 FROM flight_booking fb
 JOIN flights f ON fb.flight_id = f.flight_id
-LEFT JOIN ticket t ON fb.flight_booking_id = t.flight_booking_id
-LEFT JOIN passenger p ON t.ssn = p.ssn AND p.category = 'infant'
-WHERE p.ssn IS NULL
+WHERE fb.flight_booking_id NOT IN (
+    SELECT DISTINCT fb2.flight_booking_id
+    FROM flight_booking fb2
+    JOIN ticket t2 ON fb2.flight_booking_id = t2.flight_booking_id
+    JOIN passenger p2 ON t2.ssn = p2.ssn
+    WHERE p2.category = 'infant'
+)
 ORDER BY fb.flight_booking_id
 ";
 

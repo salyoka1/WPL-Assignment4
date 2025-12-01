@@ -11,7 +11,12 @@ $sql = "
 SELECT COUNT(*) AS total_flights
 FROM flight_booking fb
 JOIN flights f ON fb.flight_id = f.flight_id
-WHERE f.destination LIKE '%California%'
+WHERE f.destination IN (
+    'Los Angeles','San Diego','San Jose','San Francisco','Fresno',
+    'Sacramento','Long Beach','Oakland','Bakersfield','Anaheim',
+    'Riverside','Stockton','Irvine','Santa Ana','Chula Vista',
+    'Fremont','San Bernardino'
+)
   AND f.arrival_date BETWEEN '2024-09-01' AND '2024-10-31'
 ";
 
