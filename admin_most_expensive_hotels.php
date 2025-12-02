@@ -8,11 +8,20 @@ $conn = new mysqli("localhost","root","","travel_deals");
 if ($conn->connect_error) die("Database connection failed: ".$conn->connect_error);
 
 $sql = "
-SELECT hb.hotel_booking_id, hb.hotel_id, h.hotel_name, h.city, hb.check_in_date, hb.check_out_date, hb.number_of_rooms, hb.price_per_night, hb.total_price
+SELECT
+    hb.hotel_booking_id,
+    hb.hotel_id,
+    h.hotel_name,
+    h.city,
+    hb.check_in_date,
+    hb.check_out_date,
+    hb.number_of_rooms,
+    hb.price_per_night,
+    hb.total_price
 FROM hotel_booking hb
-JOIN hotels h ON hb.hotel_id = h.hotel_id
-ORDER BY hb.total_price DESC
-LIMIT 1
+JOIN hotels h
+  ON hb.hotel_id = h.hotel_id
+WHERE hb.total_price = (SELECT MAX(total_price) FROM hotel_booking)
 ";
 $result = $conn->query($sql);
 ?>
