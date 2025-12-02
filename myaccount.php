@@ -8,6 +8,7 @@ $isAdmin = isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1;
 <head>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script src="jquery-3.7.1.min.js"></script>
+    <script src="java.js"></script>
     <title>My Account</title>
 
     <style>
@@ -148,3 +149,4 @@ $isAdmin = isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1;
 </div>
 </body>
 </html>
+
