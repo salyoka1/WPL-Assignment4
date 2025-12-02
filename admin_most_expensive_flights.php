@@ -8,12 +8,19 @@ $conn = new mysqli("localhost","root","","travel_deals");
 if ($conn->connect_error) die("Database connection failed: ".$conn->connect_error);
 
 $sql = "
-SELECT fb.flight_booking_id, fb.flight_id, f.origin, f.destination, f.depart_date, f.arrival_date, f.depart_time, f.arrival_time, fb.total_price
+SELECT
+    fb.flight_booking_id,
+    fb.flight_id,
+    f.origin,
+    f.destination,
+    f.depart_date,
+    f.arrival_date,
+    f.depart_time,
+    f.arrival_time,
+    fb.total_price
 FROM flight_booking fb
 JOIN flights f ON fb.flight_id = f.flight_id
-ORDER BY fb.total_price DESC
-LIMIT 1
-";
+WHERE fb.total_price = (SELECT MAX(total_price) FROM flight_booking)";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
